@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          pip install pytest coverage
+          pip install pytest coverage > /dev/null
           pytest
           coverage run -m pytest
           coverage report
